@@ -1,0 +1,21 @@
+h1{
+  background-color: pink;
+}
+
+ul {
+  background-color: aquamarine;
+}
+
+/* id based selection */
+/* #first {
+  background-color: rgb(237, 248, 215);
+}
+
+#second{
+  background-color: rgb(193, 240, 241);
+} */
+
+/* class based selection */
+/* .third{
+  background-color: rgb(250, 232, 129);
+} */
