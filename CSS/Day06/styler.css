@@ -1,9 +1,10 @@
 h1{
-  background-color: pink;
+  background-color: rgba(226, 56, 85,0.5);
+  font-size: 50px;
 }
 
 ul {
-  background-color: aquamarine;
+  background-color: hsl(110, 50%, 80%);
 }
 
 /* id based selection */
