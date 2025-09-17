@@ -1,0 +1,33 @@
+.container {
+  background-color: rgb(210, 230, 247);
+  display: flex;
+  height: 600px;
+  flex-direction: row;
+  justify-content: center;
+  /* main axis pe kam krta he justify content */
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 5px;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+ 
+}
+.first {
+  background-color: pink;
+}
+.second {
+  background-color: rgb(212, 212, 122);
+  /* flex-grow: 1; */
+}
+.third {
+  background-color: rgb(193, 193, 171);
+  /* flex-shrink: 2; */
+  align-self: flex-start;
+}
+.fourth {
+  background-color: rgb(150, 147, 107);
+  /* flex-basis: 300px; */
+}
