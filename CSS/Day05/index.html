@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox drawback</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-color: black;
+  }
+  .container {
+    display: flex;
+    padding: 5px;
+    background-color: rgb(244, 106, 152);
+    gap: 5px;
+  }
+  .box {
+    height: 300px;
+    width: 200px;
+  }
+
+  .first{
+    background-color: wheat;
+  }
+  .second{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .child {
+    height: 140px;
+    background-color: aqua;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="box first"></div>
+    <div class="box second">
+      <div class="child child1"></div>
+      <div class="child child2"></div>
+    </div>
+  </div>
+</body>
+</html>
