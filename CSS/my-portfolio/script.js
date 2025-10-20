@@ -53,3 +53,26 @@ const scrollLeftButton = document.getElementById('scroll-left');
     });
 
 });
+
+
+/* ====================================
+   GOOGLE FORM SUBMISSION SCRIPT
+==================================== */
+// This script handles the form submission without redirecting the user.
+let submitted = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const thankYouMessage = document.getElementById('thank-you-message');
+
+    contactForm.addEventListener('submit', (e) => {
+        // This is a little trick to make the iframe submission work
+        submitted = true;
+        
+        // Hide the form
+        contactForm.style.display = 'none';
+        
+        // Show the thank you message
+        thankYouMessage.style.display = 'block';
+    });
+});

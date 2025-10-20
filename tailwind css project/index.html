@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDesktop</title>
+  <link rel="stylesheet" href="./output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="p-2 flex justify-between items-center bg-white">
+    <a href="#" id="brand" class="flex items-center gap-2">
+      <img
+        src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/todesktop-logo.bn2Qe8sb.png"
+        class="object-cover max-w-12 max-h-12">
+      <span class="text-lg font-medium">ToDesktop</span>
+    </a>
+    <div id="nav-menu" class="hidden lg:flex gap-12">
+      <a href="#" class="font-medium hover:text-blue-900">Pricing</a>
+      <a href="#" class="font-medium hover:text-blue-900">Docs</a>
+      <a href="#" class="font-medium hover:text-blue-900">Change log</a>
+      <a href="#" class="font-medium hover:text-blue-900">Blogs</a>
+      <a href="#" class="font-medium hover:text-blue-900">Login</a>
+    </div>
+    <button
+      class="hidden lg:flex gap-2 items-center border-1 border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600 cursor-pointer">
+      <img src="https://www.todesktop.com/_app/immutable/assets/electron-icon.E8mrXtZM.svg" alt="">
+      <span>Electron Developers</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+    <button class="p-2 lg:hidden" onclick="handleMenu()">
+      <i class="fa-solid fa-bars" class="text-gray-600"></i>
+    </button>
+
+    <div id="nav-dialog" class="hidden fixed z-10  bg-white inset-0 p-2 lg:hidden">
+      <div id="nav-bar" class="flex justify-between">
+        <a href="#" id="brand" class="flex items-center gap-2">
+          <img
+            src="https://www.todesktop.com/cdn-cgi/image/width=96,height=96,f=auto,fit=cover/_app/immutable/assets/todesktop-logo.bn2Qe8sb.png"
+            class="object-cover max-w-12 max-h-12">
+          <span class="text-lg font-medium">ToDesktop</span>
+        </a>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+          <i class="fa-solid fa-xmark" class="text-gray-600"></i>
+        </button>
+      </div>
+      <div class="mt-6">
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded">Pricing</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded">Docs</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded">Change log</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded">Blog</a>
+        <a href="#" class="font-medium m-3 p-3 hover:bg-gray-50 block rounded">Login</a>
+      </div>
+      <div class="h-[1px] bg-gray-100"></div>
+       <button
+      class="flex gap-2 items-center px-6 py-2 rounded mt-8 hover:bg-gray-50 w-full cursor-pointer">
+      <img src="https://www.todesktop.com/_app/immutable/assets/electron-icon.E8mrXtZM.svg" alt="">
+      <span>Electron Developers</span>
+    </button>
+    </div>
+
+  </nav>
+
+<!-- main  -->
+ <main class="bg-gradient-to-b from-purple-100 via-orange-50 to-white">
+  <!-- hero section -->
+   <div id="hero-container" class=" max-w-4xl mx-auto px-6 pb-32 p-8 flex flex-col items-start justify-start text-left lg:items-center lg:justify-center lg:text-center">
+        <div id="version-text" class="flex items-center gap-2 bg-yellow-50 border rounded border-yellow-400 px-3 w-fit text-amber-800 shadow-md hover:shadow-lg hover:-translate-y-1 transition group">
+          <div id="circle" class="w-2 h-2 bg-yellow-400 rounded-full border-yellow-600"></div>
+          <p class="cursor-pointer text-amber-800 md:flex justify-center">vO.34.0</p>
+          <i class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+        </div>
+        <h1 class="text-7xl leading-normal font-bold mt-12 mb-4">Web app to desktop app in minutes</h1>
+
+        <p class="text-xl font-normal mt-3">Take your web app codebase and transform it into a cross platform desktop app with native functionality</p>
+        <div id="buttons-container" class="mt-12 flex flex-col md:flex-row items-center justify-center gap-6 text-center">
+          <button class="p-2 bg-blue-700 shadow-sm border rounded-lg border-blue-600 cursor-pointer hover:bg-blue-600 w-full md:w-fit">Download now</button>
+          <button class="p-2 bg-white border shadow-sm rounded-lg border-gray-200 cursor-pointer hover:border-gray-300 w-full md:w-fit">Read Docs</button>
+        </div>
+          
+        </div>
+    </div>
+   </div>
+
+   <div id="companies-container" class="flex flex-col gap-4">
+    
+   <div class="flex flex-row gap-2 justify-center mb-10">
+    <img src="https://www.todesktop.com/_app/immutable/assets/pointing-arrow.hZqSxAwL.svg" class="translate-y-2">
+    <span class="text-xl">Apps powered by ToDesktop </span>
+    <img src="https://www.todesktop.com/_app/immutable/assets/pointing-arrow.hZqSxAwL.svg" class="-scale-x-100 translate-y-2">
+   </div>
+   <div id="lines-group" class="flex flex-col gap-4">
+    <div class="line1 flex  w-screen gap-4 -translate-x-48">
+      <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+      <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Campsite.zLN9hc3H.png">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+    </div>
+    <div class="line2 flex  w-screen gap-4 -translate-x-36">
+      <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+      <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+    </div>
+    <div class="line3 flex  w-screen gap-4 -translate-x-48">
+      <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+      <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+       <div class="flex flex-col min-w-24 min-h-24 items-center justify-center border border-gray-300 bg-white rounded-xl">
+        <img class="w-12 h-12 md:w-16 md:h-16" src="https://www.todesktop.com/cdn-cgi/image/width=192,height=192,f=auto,fit=cover/_app/immutable/assets/customer-logo-Unbounce.P8n0k4Cq.png">
+        <span class="text-[12px] md:text-[16px] font-semibold">Unbounce</span>
+      </div>
+    </div>
+   </div>
+   </div>
+
+
+  <div>
+    <div id="step1" class="border border-gray-200 rounded-2xl bg-gray-100 h-screen m-25 mt-10">
+
+    </div>
+    <div id="step2">
+      <div id="step1" class="border border-gray-200 rounded-2xl bg-gray-100 h-screen m-25 mt-10">
+
+    </div>
+    </div>
+    <div id="step3">
+      <div id="step1" class="border border-gray-200 rounded-2xl bg-gray-100 h-screen m-25 mt-10">
+
+    </div>
+    </div>
+  </div>
+ </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

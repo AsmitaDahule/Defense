@@ -9,7 +9,7 @@
     --accent-color: #B58AFF; /* A vibrant, professional blue */
     --text-color: #FFFFFF;
     --secondary-text-color: #A9A9A9;
-    --nav-height: 4rem;
+    --nav-height: 5rem;
 }
 
 /* ====================================
@@ -143,7 +143,7 @@ nav {
 ==================================== */
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 80% }
 }
 
 @keyframes blink-cursor {
@@ -162,8 +162,22 @@ nav {
     border-right: .15em solid var(--accent-color); /* This is the cursor */
     letter-spacing: .1em; /* Adjusts spacing between letters */
     animation: 
+      typing 4s steps(35, end),
+      blink-cursor 1s step-end;
+}
+
+.home-title {
+    /* ... other styles ... */
+    animation: 
       typing 3.5s steps(35, end),
       blink-cursor .75s step-end infinite;
+}
+
+.home-title {
+    /* ... other styles ... */
+    animation: 
+      typing 3.5s steps(35, end) forwards,
+      blink-cursor .75s step-end 3.5s 5;
 }
 
 .home-quote {
@@ -639,3 +653,109 @@ nav {
   /* This moves the image up by 10 pixels */
   transform: translateY(-10px);
 }
+
+#thank-you-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--panel-color);
+    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+}
+
+
+
+/* ====================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+==================================== */
+
+/* For Tablets and Smaller Desktops (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Make two-column layouts into one column */
+    #home .section-container,
+    .contact-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home-content {
+        text-align: center;
+        order: 2; /* Move content below the photo */
+    }
+
+    .home-photo-container {
+        order: 1; /* Move photo above the content */
+        margin-bottom: 2rem;
+    }
+
+    .home-social-links {
+        justify-content: center; /* Center the social icons */
+    }
+
+    .contact-image-container {
+        display: none; /* Hide the image on smaller screens to save space */
+    }
+
+    #projects {
+        align-items: center; /* Re-center the projects section */
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .home-name {
+        font-size: 3rem;
+    }
+}
+
+
+/* For Mobile Phones (max-width: 600px) */
+@media (max-width: 600px) {
+    section {
+        height: auto; /* Allow sections to grow as needed */
+        min-height: 100vh; /* Ensure they still feel like full pages */
+        padding: 6rem 1rem 3rem 1rem;
+    }
+
+    /* Simplify the navbar for small screens */
+    .nav-links {
+        display: none; /* Hide the links (hamburger menu would require JS) */
+    }
+
+    .home-photo-frame {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .home-name {
+        font-size: 2.5rem;
+    }
+
+    .home-title, .home-quote {
+        font-size: 1rem;
+    }
+
+    /* Make project cards narrower and hide arrows (users can swipe) */
+    .project-card {
+        flex: 0 0 300px;
+    }
+    .scroll-arrow {
+        display: none;
+    }
+    
+    /* Make internship timeline single-column */
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 1.5rem !important;
+        padding-right: 0 !important;
+    }
+
+    .timeline::after {
+        left: 0;
+    }
+}
+
+
+/* responsive  */
