@@ -1,10 +1,12 @@
 x();
 
 function x() {
-  for(let i = 0; i < 6; i++) {
+  for(var i = 0; i < 6; i++) {
+    function y(x) {
     setTimeout(function() {
-  console.log(i);
+  console.log(x);
 }, i * 1000);
+    } y(i);
   }
   var a = "asmiii"
 }
