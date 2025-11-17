@@ -81,9 +81,9 @@ const arr =  [5,1,18 , 1,1];
 
 // console.log(c);
 // console.log(b);
-console.log(a);
-let a = 20;
-var b = 10;
-const c = 2;
-console.log(a);
-console.log(c);
+// console.log(a);
+// let a = 20;
+// var b = 10;
+// const c = 2;
+// console.log(a);
+// console.log(c);
