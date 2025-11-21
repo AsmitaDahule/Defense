@@ -1,4 +1,4 @@
-const arr =  [5,1,18 , 1,1];
+// const arr =  [5,1,18 , 1,1];
 
 // function multiply(x) {
 //   return 2 * x;
@@ -87,3 +87,4 @@ const arr =  [5,1,18 , 1,1];
 // const c = 2;
 // console.log(a);
 // console.log(c);
+
