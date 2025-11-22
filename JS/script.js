@@ -88,3 +88,18 @@
 // console.log(a);
 // console.log(c);
 
+// const root = document.getElementById("root");
+// const ul = document.querySelector("ul");
+
+// const h1 = document.createElement("h1");
+// h1.textContent = "Asmita Dahule";
+
+// const img = document.createElement("img");
+// img.src = "https://tse4.mm.bing.net/th/id/OIP.rgqF-s1DGw5b1v-Tqs_P7QHaE8?pid=Api&P=0&h=180";
+
+// const li = document.createElement("li");
+// li.textContent = "Item 1";
+
+// ul.appendChild(li); 
+// document.body.appendChild(img);
+// root.appendChild(h1);
