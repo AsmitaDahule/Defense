@@ -7,8 +7,8 @@ import Product from './components/Product.jsx'
 function App() {
  return (
     <>
-    <Product />
-    <Product />
+    <Product name="asmita" />
+    <Product name="samu"/>
     </>
  )
 }
