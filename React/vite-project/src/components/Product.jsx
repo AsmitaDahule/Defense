@@ -3,8 +3,10 @@ import React from 'react'
 const Product = (props) => {
   return (
     <div>
-      <p>I am a {props.name}</p>
-      <p>Love from {props.city}</p>
+      <ul>{props.name}'s grocery city-{props.city}'
+        {props.item1 && <li>{props.item1}</li>}
+        {props.item3 && <li>{props.item3}</li>}
+      </ul>
     </div>
   )
 }

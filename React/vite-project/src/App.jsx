@@ -7,8 +7,9 @@ import Product from './components/Product.jsx'
 function App() {
  return (
     <>
-    <Product name="asmita" city="mumbai"/>
-    <Product name="samu"/>
+    <Product name="asmita" city="mumbai" item1="milk" item2="oats" item3="bread"/>
+    <Product name="samu" city="pune" item1="peanut butter" item2="oranges" item3="french bread"/>
+    <Product name="titu" city="mumbai" item1="chocolate peanut butter" item2="bananas"/>
     </>
  )
 }
